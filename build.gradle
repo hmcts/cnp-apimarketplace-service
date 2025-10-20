@@ -13,7 +13,7 @@ plugins {
 }
 
 application {
-  mainClass = 'uk.gov.hmcts.reform.demo.Application'
+  mainClass = 'uk.gov.hmcts.reform.apimarketplace.Application'
   group = 'uk.gov.hmcts.reform'
   version = '0.0.1'
 }
@@ -102,8 +102,8 @@ tasks.check.dependsOn(integration)
 
 sonarqube {
   properties {
-    property "sonar.projectName", "Reform :: spring-boot-template"
-    property "sonar.projectKey", "uk.gov.hmcts.reform:spring-boot-template"
+    property "sonar.projectName", "Reform :: apim-marketplace"
+    property "sonar.projectKey", "uk.gov.hmcts.reform:apim-marketplace"
   }
 }
 
@@ -155,10 +155,11 @@ dependencies {
 
   testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
   testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.5.6'
+  testImplementation 'org.junit.platform:junit-platform-launcher'
 }
 
 bootJar {
-  archiveFileName = "spring-boot-template.jar"
+  archiveFileName = "apim-marketplace.jar"
 
   manifest {
     attributes('Implementation-Version': project.version.toString())
