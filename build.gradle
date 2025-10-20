@@ -13,8 +13,8 @@ plugins {
 }
 
 application {
-  mainClass = 'uk.gov.hmcts.reform.demo.Application'
-  group = 'uk.gov.hmcts.reform'
+  mainClass = 'uk.gov.hmcts.apimarketplace.Application'
+  group = 'uk.gov.hmcts.apimarketplace'
   version = '0.0.1'
 }
 
