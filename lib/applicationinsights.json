@@ -1,7 +1,7 @@
 {
   "connectionString": "${file:/mnt/secrets/apim/app-insights-connection-string}",
   "role": {
-    "name": "apim-marketplace"
+    "name": "apimarketplace"
   },
   "sampling": {
     "overrides": [
