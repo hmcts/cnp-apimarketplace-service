@@ -1,11 +1,11 @@
 apiVersion: v2
 appVersion: "1.0"
-description: A Helm chart for spring-boot-template App
-name: rpe-spring-boot-template
-home: https://github.com/hmcts/spring-boot-template
+description: A Helm chart for apim-marketplace App
+name: apim-marketplace
+home: https://github.com/hmcts/apim-marketplace
 version: 0.0.17
 maintainers:
-  - name: HMCTS rpe team
+  - name: HMCTS apim team
 dependencies:
   - name: java
     version: 5.2.1

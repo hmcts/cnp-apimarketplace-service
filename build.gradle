@@ -102,8 +102,8 @@ tasks.check.dependsOn(integration)
 
 sonarqube {
   properties {
-    property "sonar.projectName", "Reform :: spring-boot-template"
-    property "sonar.projectKey", "uk.gov.hmcts.reform:spring-boot-template"
+    property "sonar.projectName", "Reform :: apim-marketplace"
+    property "sonar.projectKey", "uk.gov.hmcts.reform:apim-marketplace"
   }
 }
 
@@ -159,7 +159,7 @@ dependencies {
 }
 
 bootJar {
-  archiveFileName = "spring-boot-template.jar"
+  archiveFileName = "apim-marketplace.jar"
 
   manifest {
     attributes('Implementation-Version': project.version.toString())
