@@ -1,4 +1,4 @@
-variables.tfmodule "vault" {
+module "vault" {
   source                  = "git@github.com:hmcts/cnp-module-key-vault?ref=master"
   name                    = "${var.product}-${var.env}"
   product                 = var.product
