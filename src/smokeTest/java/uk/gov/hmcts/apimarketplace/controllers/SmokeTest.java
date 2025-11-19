@@ -14,7 +14,7 @@ import static io.restassured.RestAssured.given;
 
 @Slf4j
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-class SampleSmokeTest {
+class SmokeTest {
     @Value("${TEST_URL:http://localhost:4550}")
     private String testUrl;
 
