@@ -27,16 +27,16 @@ class SampleSmokeTest {
     void smokeTest() {
         log.info("SmokeTest hitting endpoint {}", testUrl);
         try {
-        Response response = given()
-            .baseUri(testUrl)
-            .contentType(ContentType.JSON)
-            .when()
-            .get()
-            .then()
-            .extract().response();
+            Response response = given()
+                .baseUri(testUrl)
+                .contentType(ContentType.JSON)
+                .when()
+                .get()
+                .then()
+                .extract().response();
             log.info("SmokeTest response:{}", response.asString());
-        Assertions.assertEquals(200, response.statusCode());
-        Assertions.assertTrue(response.asString().equals("API Marketplace template"));
+            Assertions.assertEquals(200, response.statusCode());
+            Assertions.assertTrue(response.asString().equals("API Marketplace template"));
         } catch (Exception e) {
             log.info("SmokeTest exception ", e);
         }
