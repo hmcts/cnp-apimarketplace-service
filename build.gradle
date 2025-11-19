@@ -45,7 +45,8 @@ configurations {
   integrationTestRuntimeOnly.extendsFrom runtimeOnly
 
   smokeTestImplementation.extendsFrom testImplementation
-  smokeTestRuntimeOnly.extendsFrom runtimeOnly
+  smokeTestRuntimeOnly.extendsFrom testRuntimeOnly
+  smokeTestAnnotationProcessor.extendsFrom testAnnotationProcessor
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -133,8 +134,7 @@ repositories {
 }
 
 ext {
-  log4JVersion = "2.25.1"
-  logbackVersion = "1.5.18"
+  lombokVersion = "1.18.42"
 }
 
 ext['snakeyaml.version'] = '2.0'
@@ -148,10 +148,11 @@ dependencies {
 
   implementation group: 'com.github.hmcts.java-logging', name: 'logging', version: '6.1.9'
 
-  implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: log4JVersion
-  implementation group: 'org.apache.logging.log4j', name: 'log4j-to-slf4j', version: log4JVersion
-  implementation group: 'ch.qos.logback', name: 'logback-classic', version: logbackVersion
-  implementation group: 'ch.qos.logback', name: 'logback-core', version: logbackVersion
+  // --- Lombok for main and test code ---
+  testImplementation "org.projectlombok:lombok:${lombokVersion}"
+  annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+  testImplementation "org.projectlombok:lombok:${lombokVersion}"
+  testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
   testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
   testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.5.6'
