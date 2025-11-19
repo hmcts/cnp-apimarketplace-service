@@ -36,7 +36,7 @@ class SampleSmokeTest {
                 .extract().response();
             log.info("SmokeTest response:{}", response.asString());
             Assertions.assertEquals(200, response.statusCode());
-            Assertions.assertTrue(response.asString().startsWith("Welcome"));
+            Assertions.assertTrue(response.asString().equals("API Marketplace template"));
         } catch (Exception e) {
             log.info("SmokeTest exception ", e);
         }
