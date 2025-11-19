@@ -9,4 +9,12 @@
     <cve>CVE-2023-35116</cve>
   </suppress>
   <!--End of false positives section -->
+
+  <!--Please add all the temporary suppression under the below section-->
+  <suppress>
+    <!-- Spring boot 3 brings in strictly org.apache.commons:commons-lang3:3.17.0 -->
+    <notes>Temporary Suppressions CVE-2025-48924</notes>
+    <cve>CVE-2025-48924</cve>
+  </suppress>
+  <!--End of temporary suppression section -->
 </suppressions>
